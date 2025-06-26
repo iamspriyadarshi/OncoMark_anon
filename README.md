@@ -55,25 +55,3 @@ OncoMark also provides a web server for easy interaction.
 You can use the hosted web server directly:
 
 [OncoMark Web Server](https://oncomark-ai.hf.space/)
-
----
-
-## Suggestions
-
-We welcome suggestions! If you have any ideas or feedback to improve OncoMark, please reach out to [Shreyansh Priyadarshi](mailto:shreyansh.priyadarshi02@gmail.com).
-
----
-
-## Citation
-```bibtex
-@article {Priyadarshi2025.02.03.636380,
-	author = {Priyadarshi, Shreyansh and Mazumder, Camellia and Neekhra, Bhavesh and Biswas, Sayan and Chowdhury, Debojyoti and Gupta, Debayan and Haldar, Shubhasis},
-	title = {Robust Prediction of Patient-Specific Cancer Hallmarks Using Neural Multi-Task Learning: a model development and validation study},
-	elocation-id = {2025.02.03.636380},
-	year = {2025},
-	doi = {10.1101/2025.02.03.636380},
-	publisher = {Cold Spring Harbor Laboratory}, 
-	URL = {https://www.biorxiv.org/content/early/2025/02/08/2025.02.03.636380},
-	eprint = {https://www.biorxiv.org/content/early/2025/02/08/2025.02.03.636380.full.pdf},
-	journal = {bioRxiv}
-}
