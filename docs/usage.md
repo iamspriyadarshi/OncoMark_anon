@@ -4,9 +4,23 @@ OncoMark provides a Python API and a web interface to quantify hallmark activity
 
 ---
 
+### Example Data
+
+You can find example input data for testing in the `test` directory of the GitHub repository:
+
+[OncoMark Test Data](https://github.com/SML-CompBio/OncoMark/blob/main/test/model_test_data.csv)
+
+---
+
 ### Python API
 
 The Python API allows you to directly process data and predict hallmark scores using the pre-trained model provided with the package.
+
+#### Step 0: Install Packages
+
+```bash
+pip install OncoMark
+```
 
 #### Step 1: Import Required Libraries
 
@@ -23,7 +37,7 @@ Load your transcriptomics data into a pandas `DataFrame`. The data should be for
 
 ```python
 # Load input data as a pandas DataFrame
-input_data = pd.read_csv('path_to_your_data.csv', index_col=0)
+input_data = pd.read_csv('model_test_data.csv', index_col=0)
 ```
 
 #### Step 3: Predict Hallmark Scores
@@ -57,31 +71,23 @@ You can use the hosted web server to upload your data and obtain hallmark activi
 
 [OncoMark Web Server](https://oncomark-ai.hf.space/)
 
----
+The comprehensive video detailing how to use OncoMark web-server is embedded below:
 
-### Example Data
+<div style="padding:42.86% 0 0 0;position:relative;">
+  <iframe src="https://player.vimeo.com/video/1083623369?h=3bc9b08821&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+    frameborder="0" 
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+    title="OncoMark_Usage">
+  </iframe>
+</div>
 
-You can find example input data for testing in the `test` directory of the GitHub repository or use the following snippet to create a sample DataFrame:
-
-```python
-import pandas as pd
-import numpy as np
-
-# Generate random example data
-genes = ['Gene1', 'Gene2', 'Gene3', 'Gene4']
-samples = ['Sample1', 'Sample2', 'Sample3']
-data = np.random.rand(len(samples), len(genes))
-
-# Create a DataFrame
-example_data = pd.DataFrame(data, index=samples, columns=genes)
-print(example_data)
-```
+<script src="https://player.vimeo.com/api/player.js"></script>
 
 ---
 
 ### Notes and Tips
 
-- Ensure your input data contains genes matching the feature names used during model training.
 - Ensure that the genes is in the columns of the datasets.
 - Genes missing from the input data but used during model training will be filled with zeros, while additional genes not used in training will be ignored.
 - Check the [Documentation](https://oncomark.readthedocs.io/en/latest/) for troubleshooting tips and advanced usage.
